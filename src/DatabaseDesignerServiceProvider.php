@@ -1,17 +1,43 @@
 <?php
 
-namespace DBDesigner\DatabaseDesigner;
+namespace DBDesigner;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class DatabaseDesignerServiceProvider extends PackageServiceProvider
+class DatabaseDesignerServiceProvider extends ServiceProvider
 {
-    public function configurePackage(Package $package): void
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
     {
-        $package
-            ->name('laravel-database-designer')
-            ->hasConfigFile()
-            ->hasRoute('database-designer');
+//        $this->registerEvents();
+        $this->registerRoutes();
+//        $this->registerResources();
+//        $this->defineAssetPublishing();
+//        $this->offerPublishing();
+//        $this->registerCommands();
+    }
+
+    /**
+     * Register the Database Designer routes.
+     *
+     * @return void
+     */
+    protected function registerRoutes(): void
+    {
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+    }
+
+    /**
+     * Register the Database Designer resources.
+     *
+     * @return void
+     */
+    protected function registerResources(): void
+    {
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'db-designer');
     }
 }

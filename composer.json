@@ -21,8 +21,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "illuminate/contracts": "^9.0",
-        "spatie/laravel-package-tools": "^1.13.0"
+        "illuminate/contracts": "^9.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -34,13 +33,13 @@
     },
     "autoload": {
         "psr-4": {
-            "DBDesigner\\DatabaseDesigner\\": "src",
-            "DBDesigner\\DatabaseDesigner\\Database\\Factories\\": "database/factories"
+            "DBDesigner\\": "src",
+            "DBDesigner\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DBDesigner\\DatabaseDesigner\\Tests\\": "tests"
+            "DBDesigner\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -59,10 +58,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DBDesigner\\DatabaseDesigner\\DatabaseDesignerServiceProvider"
+                "DBDesigner\\DatabaseDesignerServiceProvider"
             ],
             "aliases": {
-                "DatabaseDesigner": "DBDesigner\\DatabaseDesigner\\Facades\\DatabaseDesigner"
+                "DatabaseDesigner": "DBDesigner\\Facades\\DatabaseDesigner"
             }
         }
     },

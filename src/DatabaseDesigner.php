@@ -1,6 +1,6 @@
 <?php
 
-namespace DBDesigner\DatabaseDesigner;
+namespace DBDesigner;
 
 class DatabaseDesigner
 {
