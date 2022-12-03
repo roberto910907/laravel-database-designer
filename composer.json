@@ -21,10 +21,13 @@
     ],
     "require": {
         "php": "^8.0",
-        "illuminate/contracts": "^9.0"
+        "doctrine/dbal": "^3.5",
+        "illuminate/contracts": "^9.0",
+        "nuwave/lighthouse": "^5.67"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
+        "mll-lab/laravel-graphiql": "^1.0",
         "nunomaduro/collision": "^6.0",
         "orchestra/testbench": "^7.0",
         "pestphp/pest": "^1.21",

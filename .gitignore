@@ -9,3 +9,7 @@ phpstan.neon
 testbench.yaml
 vendor
 node_modules
+
+_lighthouse_ide_helper.php
+programmatic-types.graphql
+schema-directives.graphql

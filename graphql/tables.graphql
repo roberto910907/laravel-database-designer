@@ -1,0 +1,67 @@
+extend type Query {
+    tables(
+        name: String
+    ): [Table]
+}
+
+type Table {
+    id: ID!
+
+    "Non-unique name."
+    name: String!
+
+    "Primary key name."
+    primaryKey: String
+
+    "Column list from the table"
+    columns: [Column]!
+
+    "Index list from the table"
+    indexes: [Index]!
+}
+
+type Column {
+    "Non-unique name."
+    name: String!
+
+    "Column type."
+    type: String!
+
+    "Column type name."
+    typeClass: String!
+
+    "Column length value."
+    length: Int
+
+    "Column precision value."
+    precision: Int!
+
+    "Column scale value."
+    scale: Int!
+
+    "Column unsigned value."
+    unsigned: Boolean!
+
+    "Column autoincrement value."
+    autoincrement: Boolean!
+
+    "Column not null value."
+    notnull: Boolean!
+
+    "Column default value."
+    default: String
+
+    "Column definition value."
+    columnDefinition: Boolean
+}
+
+type Index {
+    "Non-unique name."
+    name: String!
+
+    "Is primary column value."
+    isPrimary: Boolean
+
+    "Is unique column value."
+    isUnique: Boolean
+}
