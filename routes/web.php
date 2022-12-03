@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use DBDesigner\DatabaseDesigner\Http\Controllers\HomeController;
+use DBDesigner\Http\Controllers\HomeController;
 
 Route::prefix('api')->group(function () {
     // Dashboard Routes...
