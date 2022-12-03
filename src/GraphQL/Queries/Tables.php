@@ -2,6 +2,7 @@
 
 namespace DBDesigner\GraphQL\Queries;
 
+use Exception;
 use DBDesigner\Models\Database;
 use Doctrine\DBAL\Schema\Index;
 use Doctrine\DBAL\Schema\Table;
@@ -13,7 +14,7 @@ final class Tables
      * @param null $_
      * @param array{} $args
      *
-     * @throws \Exception
+     * @throws Exception
      *
      * @return array
      */
@@ -24,26 +25,27 @@ final class Tables
         $tablesSchema = collect($database->getConnection()->getDoctrineSchemaManager()->listTables());
 
         return $tablesSchema
-          ->map(function (Table $table) {
-              return [
-                'name' => $table->getName(),
-                'primaryKey' => $table->getPrimaryKey()?->getColumns()[0],
-                'columns' => collect($table->getColumns())->map(function (Column $column) {
-                    return [
-                      ...$column->toArray(),
-                      'type' => $column->getType()->getName(),
-                      'typeClass' => $column->getType()::class,
-                    ];
-                }),
-                'indexes' => collect($table->getIndexes())->map(function (Index $index) {
-                    return [
-                      'name' => $index->getName(),
-                      'isPrimary' => $index->isPrimary(),
-                      'isUnique' => $index->isUnique(),
-                    ];
-                }),
-              ];
-          })
-          ->toArray();
+            ->map(function (Table $table) {
+                return [
+                    'name' => $table->getName(),
+                    'primaryKey' => $table->getPrimaryKey()?->getColumns()[0],
+                    'columns' => collect($table->getColumns())->map(function (Column $column) {
+                        return array_merge(
+                            $column->toArray(),
+                            [
+                                'type' => $column->getType()->getName(),
+                                'typeClass' => $column->getType()::class,
+                            ]);
+                    }),
+                    'indexes' => collect($table->getIndexes())->map(function (Index $index) {
+                        return [
+                            'name' => $index->getName(),
+                            'isPrimary' => $index->isPrimary(),
+                            'isUnique' => $index->isUnique(),
+                        ];
+                    }),
+                ];
+            })
+            ->toArray();
     }
 }
