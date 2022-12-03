@@ -38,7 +38,7 @@ return [
         /*
          * The URI the endpoint responds to, e.g. mydomain.com/graphql.
          */
-        'uri' => '/graphql',
+        'uri' => '/db-designer/graphql',
 
         /*
          * Lighthouse creates a named route for convenient URL generation and redirects.
@@ -536,6 +536,6 @@ return [
         /*
          * Location of resolver classes when resolving the `_entities` field.
          */
-        'entities_resolver_namespace' => 'App\\GraphQL\\Entities',
+        'entities_resolver_namespace' => 'DBDesigner\\GraphQL\\Entities',
     ],
 ];
