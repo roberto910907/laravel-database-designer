@@ -1,0 +1,28 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "phpdoc_separation": true,
+        "phpdoc_single_line_var_spacing": true,
+        "phpdoc_indent": true,
+        "phpdoc_order": true,
+        "phpdoc_scalar": true,
+        "phpdoc_trim": true,
+        "phpdoc_types": true,
+        "phpdoc_add_missing_param_annotation": true,
+        "phpdoc_align": {
+            "align": "left"
+        },
+        "ordered_class_elements": false,
+        "ordered_imports": {
+            "sort_algorithm": "length"
+        },
+        "phpdoc_var_without_name": true,
+        "phpdoc_summary": true
+    },
+    "notName": [
+        "server.php"
+    ],
+    "exclude": [
+        "tests/Fixtures"
+    ]
+}
