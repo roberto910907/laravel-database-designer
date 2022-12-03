@@ -5,7 +5,7 @@ extend type Query {
 }
 
 type Table {
-    id: ID!
+    id: ID
 
     "Non-unique name."
     name: String!
