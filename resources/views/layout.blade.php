@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-full bg-gray-100" lang="en">
 <head>
     <!-- Meta Information -->
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
     <!-- Style sheets-->
     {{--    <link href="{{ asset(mix($cssFile, 'vendor/db-designer')) }}" rel="stylesheet">--}}
 </head>
-<body>
+<body class="h-full overflow-hidden">
 <div id="db-designer">
 </div>
 
