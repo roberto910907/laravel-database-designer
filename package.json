@@ -6,9 +6,17 @@
     },
     "devDependencies": {
         "axios": "^1.1.2",
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-ext": "^0.1.0",
+        "eslint-plugin-import": "^2.24.2",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-vue": "^8.0.3",
         "laravel-vite-plugin": "^0.7.0",
         "lodash": "^4.17.19",
         "postcss": "^8.4.19",
+        "prettier-plugin-tailwindcss": "^0.2.0",
         "vite": "^3.0.0"
     },
     "dependencies": {
@@ -18,7 +26,9 @@
         "@tailwindcss/typography": "^0.5.8",
         "@vitejs/plugin-vue": "^3.2.0",
         "autoprefixer": "^10.4.13",
+        "eslint-import-resolver-alias": "^1.1.2",
         "pinia": "^2.0.27",
+        "prettier": "^2.8.0",
         "sass": "^1.56.1",
         "sass-loader": "^13.2.0",
         "tailwindcss": "^3.2.4",
