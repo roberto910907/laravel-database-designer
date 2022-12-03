@@ -38,7 +38,7 @@ return [
         /*
          * The URI the endpoint responds to, e.g. mydomain.com/graphql.
          */
-        'uri' => '/db-designer/graphql',
+        'uri' => '/graphql',
 
         /*
          * Lighthouse creates a named route for convenient URL generation and redirects.
@@ -91,7 +91,7 @@ return [
     */
 
     'schema' => [
-        'register' => base_path('graphql/schema.graphql'),
+        'register' => __DIR__.'/../graphql/schema.graphql',
     ],
 
     /*
