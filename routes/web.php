@@ -8,4 +8,4 @@ Route::prefix('api')->group(function () {
     Route::get('/schema/list', [SchemaController::class, 'list'])->name('schema.tables');
 });
 
-Route::get('/db-designer', [HomeController::class, 'index'])->name('db-designer.index');
+Route::get('/db-designer/{route?}', [HomeController::class, 'index'])->name('db-designer.index');

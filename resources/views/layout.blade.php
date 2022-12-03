@@ -13,7 +13,7 @@
     {{--    <link href="{{ asset(mix($cssFile, 'vendor/db-designer')) }}" rel="stylesheet">--}}
 </head>
 <body class="h-full overflow-hidden">
-<div id="db-designer">
+<div id="db-designer" class="flex h-full flex-col">
 </div>
 
 @vite('resources/js/app.js', 'vendor/db-designer/build')
