@@ -8,8 +8,8 @@ declare(strict_types=1);
 
 namespace DBDesigner\Console\Commands;
 
-use Illuminate\Console\Command;
 use Illuminate\Support\Str;
+use Illuminate\Console\Command;
 
 class InstallCommand extends Command
 {
