@@ -12,10 +12,7 @@ const tables = ref([]);
 
 onMounted(async () => {
     await axios.get('/api/schema/list').then((response) => {
-        tables.value = response.data;
-        console.log(response.data);
-        console.log(tables.value);
-        console.log(tables);
+        tables.value = response.data.data;
     });
 });
 </script>
