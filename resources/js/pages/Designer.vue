@@ -1,3 +1,3 @@
 <template>
-    <h3>Awesome Component</h3>
+    <h3 class="text-gray-900">Awesome Component</h3>
 </template>
