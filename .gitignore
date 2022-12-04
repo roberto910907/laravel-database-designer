@@ -9,6 +9,7 @@ phpstan.neon
 testbench.yaml
 vendor
 node_modules
+yarn-error.log
 
 _lighthouse_ide_helper.php
 programmatic-types.graphql

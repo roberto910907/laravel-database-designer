@@ -30,14 +30,6 @@ class DatabaseDesignerServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/db-designer.php', 'db-designer'
         );
-
-        $this->mergeConfigFrom(
-            __DIR__.'/../config/lighthouse.php', 'db-lighthouse'
-        );
-
-        $this->mergeConfigFrom(
-            __DIR__.'/../config/graphiql.php', 'db-graphiql'
-        );
     }
 
     /**

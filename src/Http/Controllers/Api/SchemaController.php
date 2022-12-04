@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace DBDesigner\Http\Controllers\Api;
 
+use Doctrine\DBAL\Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use DBDesigner\Services\SchemaManager;
@@ -19,6 +20,11 @@ class SchemaController extends Controller
         //...
     }
 
+    /**
+     * @throws Exception
+     *
+     * @return JsonResponse
+     */
     public function list(): JsonResponse
     {
         return response()->json([

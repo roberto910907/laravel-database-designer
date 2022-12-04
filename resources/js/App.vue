@@ -46,7 +46,7 @@
                 <div
                     class="relative flex h-full w-96 flex-col overflow-y-auto border-r border-gray-200 bg-gray-100"
                 >
-                    <!-- Your content -->
+                    <router-view></router-view>
                 </div>
             </aside>
         </main>
