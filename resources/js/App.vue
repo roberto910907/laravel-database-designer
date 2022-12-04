@@ -37,17 +37,14 @@
                 aria-labelledby="primary-heading"
                 class="flex h-full min-w-0 flex-1 flex-col overflow-y-auto lg:order-last"
             >
-                <h1 id="primary-heading" class="sr-only">Home</h1>
-                <!-- Your content -->
+                <router-view></router-view>
             </section>
 
             <!-- Secondary column (hidden on smaller screens) -->
             <aside class="hidden lg:order-first lg:block lg:flex-shrink-0">
                 <div
                     class="relative flex h-full w-96 flex-col overflow-y-auto border-r border-gray-200 bg-gray-100"
-                >
-                    <router-view></router-view>
-                </div>
+                ></div>
             </aside>
         </main>
     </div>
