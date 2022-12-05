@@ -1,10 +1,10 @@
-import DesignerPage from '@/pages/Designer.vue';
+import DiagramExplorer from '@/pages/DiagramExplorer.vue';
 
 const routes = [
     {
-        path: '/home',
-        name: 'home',
-        component: DesignerPage,
+        path: '/diagram-explorer',
+        name: 'diagram-explorer',
+        component: DiagramExplorer,
     },
 ];
 

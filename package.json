@@ -16,24 +16,25 @@
         "lodash": "^4.17.19",
         "postcss": "^8.4.19",
         "prettier-plugin-tailwindcss": "^0.2.0",
+        "eslint-import-resolver-alias": "^1.1.2",
+        "autoprefixer": "^10.4.13",
+        "prettier": "^2.8.0",
         "vite": "^3.0.0"
     },
     "dependencies": {
-        "axios": "^1.2.0",
         "@headlessui/vue": "^1.7.4",
         "@heroicons/vue": "^2.0.13",
         "@tailwindcss/forms": "^0.5.3",
         "@tailwindcss/typography": "^0.5.8",
         "@vitejs/plugin-vue": "^3.2.0",
-        "autoprefixer": "^10.4.13",
-        "eslint-import-resolver-alias": "^1.1.2",
+        "axios": "^1.2.0",
+        "konva": "^8.3.14",
         "pinia": "^2.0.27",
-        "prettier": "^2.8.0",
         "sass": "^1.56.1",
         "sass-loader": "^13.2.0",
         "tailwindcss": "^3.2.4",
         "vue": "^3.2.45",
-        "vue-router": "4",
-        "vuedraggable": "^2.24.3"
+        "vue-konva": "^3.0.2",
+        "vue-router": "4"
     }
 }

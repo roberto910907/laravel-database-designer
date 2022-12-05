@@ -7,6 +7,18 @@
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
+## Still in Development
+Note: This package is not production ready :(
+
+## TODO List
+- Canvas based ERD diagram
+- Left panel with tables tree information linked to the diagram
+- Right panel with table and column information and configtion options
+- Collapsed left panel with main menus including: Diagram, Migration, History, etc
+- Use the laravel-console-generator to create the model and migration automatically
+- Write documentation
+- Write unit, functional and E2E tests
+
 ## Installation
 
 You can install the package via composer:

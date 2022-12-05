@@ -7,10 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{--    <link rel="shortcut icon" href="{{ asset('/vendor/horizon/img/favicon.png') }}">--}}
 
-    <title>Application Database Designer</title>
-
-    <!-- Style sheets-->
-    {{--    <link href="{{ asset(mix($cssFile, 'vendor/db-designer')) }}" rel="stylesheet">--}}
+    <title>Database Designer</title>
 </head>
 <body class="h-full overflow-hidden">
 <div id="db-designer" class="flex h-full flex-col">

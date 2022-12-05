@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import { createRouter, createWebHistory } from 'vue-router';
+import vueKonva from 'vue-konva';
 import App from './App.vue';
 import '../scss/app.scss';
 import routes from './router';
@@ -13,6 +14,7 @@ const router = createRouter({
     routes,
 });
 
+app.use(vueKonva);
 app.use(router);
 app.use(pinia);
 app.mount('#db-designer');
