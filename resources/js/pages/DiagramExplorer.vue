@@ -11,7 +11,7 @@
         <div
             class="relative flex h-full w-96 flex-col overflow-y-auto border-r border-gray-200 bg-gray-100"
         >
-            Tree goes here
+            <Tree :tables="tables"></Tree>
         </div>
     </aside>
 </template>
@@ -20,6 +20,7 @@
 import axios from 'axios';
 import { ref, onMounted } from 'vue';
 import Designer from '@/components/Diagram/Designer.vue';
+import Tree from '@/components/Navigator/Tree.vue';
 
 const tables = ref([]);
 

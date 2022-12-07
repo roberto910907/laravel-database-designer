@@ -16,11 +16,11 @@
     "src": "resources/js/assets/icons8-diamonds-40-white.png"
   },
   "resources/js/app.js": {
-    "file": "assets/app.8db9d006.js",
+    "file": "assets/app.86389b5a.js",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app.fff24fc4.css"
+      "assets/app.4f0c9c7f.css"
     ],
     "assets": [
       "assets/canvas-background.9ded4940.png",
@@ -30,7 +30,7 @@
     ]
   },
   "resources/js/app.css": {
-    "file": "assets/app.fff24fc4.css",
+    "file": "assets/app.4f0c9c7f.css",
     "src": "resources/js/app.css"
   }
 }

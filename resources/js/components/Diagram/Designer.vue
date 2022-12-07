@@ -22,7 +22,7 @@
                 :key="table.name"
                 :table-data="table"
                 :position="{
-                    x: index * 20,
+                    x: index * 100,
                     y: index * 20,
                 }"
                 :width-table="224"

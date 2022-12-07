@@ -37,57 +37,55 @@
             }"
         />
         <template
-            v-for="(column, index) in tableData.columns"
+            v-for="(column, index) in Object.values(tableData.columns)"
             :key="column.name"
         >
-            <div>
-                <!--                <v-image-->
-                <!--                    v-if="column.name === tableData.primaryKey"-->
-                <!--                    :config="{-->
-                <!--                        image: primaryKey,-->
-                <!--                        width: 13,-->
-                <!--                        height: 13,-->
-                <!--                        x: 5,-->
-                <!--                        y: 5 + 30 - 2 + index * 20,-->
-                <!--                    }"-->
-                <!--                />-->
-                <!--                <v-image-->
-                <!--                    v-else-if="column.notnull === true"-->
-                <!--                    :config="{-->
-                <!--                        image: imageNotNull,-->
-                <!--                        width: 13,-->
-                <!--                        height: 13,-->
-                <!--                        x: 5,-->
-                <!--                        y: 5 + 30 - 2 + index * 20,-->
-                <!--                    }"-->
-                <!--                />-->
-                <!--                <v-image-->
-                <!--                    v-else-if="column.notnull === false"-->
-                <!--                    :config="{-->
-                <!--                        image: imageNull,-->
-                <!--                        width: 13,-->
-                <!--                        height: 13,-->
-                <!--                        x: 5,-->
-                <!--                        y: 5 + 30 - 2 + index * 20,-->
-                <!--                    }"-->
-                <!--                />-->
-                <v-text
-                    :config="{
-                        text: column.name,
-                        x: 23,
-                        y: 5 + 30 + index * 20,
-                    }"
-                />
-                <v-text
-                    :config="{
-                        text: column.type,
-                        x: 0,
-                        y: 5 + 30 + index * 20,
-                        width: widthTable - 5,
-                        align: 'right',
-                    }"
-                />
-            </div>
+            <v-image
+                v-if="column.name === tableData.primaryKey"
+                :config="{
+                    image: primaryKey,
+                    width: 13,
+                    height: 13,
+                    x: 5,
+                    y: 5 + 30 - 2 + index * 20,
+                }"
+            />
+            <v-image
+                v-else-if="column.notnull === true"
+                :config="{
+                    image: imageNotNull,
+                    width: 13,
+                    height: 13,
+                    x: 5,
+                    y: 5 + 30 - 2 + index * 20,
+                }"
+            />
+            <v-image
+                v-else-if="column.notnull === false"
+                :config="{
+                    image: imageNull,
+                    width: 13,
+                    height: 13,
+                    x: 5,
+                    y: 5 + 30 - 2 + index * 20,
+                }"
+            />
+            <v-text
+                :config="{
+                    text: column.name,
+                    x: 23,
+                    y: 5 + 30 + index * 20,
+                }"
+            />
+            <v-text
+                :config="{
+                    text: column.type,
+                    x: 0,
+                    y: 5 + 30 + index * 20,
+                    width: widthTable - 5,
+                    align: 'right',
+                }"
+            />
         </template>
     </v-group>
 </template>
