@@ -5,16 +5,19 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/roberto910907/laravel-database-designer/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/roberto910907/laravel-database-designer/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/roberto910907/laravel-database-designer.svg?style=flat-square)](https://packagist.org/packages/roberto910907/laravel-database-designer)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This package aims to ease interaction with databases
+when developing a Laravel application. The main goal is to automate
+the models and migrations generation.
 
 ## Still in Development
-Note: This package is not production ready :(
+Note: This package is in development :(
 
 ## TODO List
 - Canvas based ERD diagram
 - Left panel with tables tree information linked to the diagram
-- Right panel with table and column information and configtion options
+- Right panel with table and column information and config options
 - Collapsed left panel with main menus including: Diagram, Migration, History, etc
+- Migration menu should show executed and pending migrations
 - Use the laravel-console-generator to create the model and migration automatically
 - Write documentation
 - Write unit, functional and E2E tests
