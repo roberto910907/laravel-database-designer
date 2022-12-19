@@ -18,7 +18,7 @@
             />
 
             <Entity
-                v-for="(table, index) in tables"
+                v-for="(table, index) in store.tables"
                 :key="table.name"
                 :table-data="table"
                 :position="{
@@ -32,13 +32,16 @@
 </template>
 
 <script setup>
-import { ref, onMounted, defineProps } from 'vue';
+import { ref, onMounted } from 'vue';
+import { useDatabaseStore } from '@/stores/DatabaseStore';
 import backgroundPatternImage from '@/assets/canvas-background.png';
 import Entity from './Entity.vue';
 
+const store = useDatabaseStore();
+
 const canvasProperties = {
     width: 1500,
-    height: 700,
+    height: 900,
     zoom: 1,
     canvas_position_x: 0,
     canvas_position_y: 0,
@@ -46,10 +49,6 @@ const canvasProperties = {
 };
 
 const backgroundImage = ref('');
-
-const { tables } = defineProps({
-    tables: Array,
-});
 
 onMounted(() => {
     const backgroundPattern = new window.Image();

@@ -6,6 +6,7 @@ use DBDesigner\Http\Controllers\Api\SchemaController;
 
 Route::prefix('api')->group(function () {
     Route::get('/schema/list', [SchemaController::class, 'list'])->name('schema.tables');
+    Route::get('/schema/details', [SchemaController::class, 'details'])->name('schema.details');
 });
 
 Route::get('/db-designer/{route?}', [HomeController::class, 'index'])->name('db-designer.index');

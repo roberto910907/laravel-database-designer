@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace DBDesigner\Services;
 
+use Doctrine\DBAL\Driver\ServerInfoAwareConnection;
 use Doctrine\DBAL\Exception;
 use DBDesigner\Models\Database;
 use Doctrine\DBAL\Schema\Index;
@@ -16,6 +17,26 @@ use Doctrine\DBAL\Schema\Column;
 
 class SchemaManager
 {
+    /**
+     * @throws Exception
+     *
+     * @return array
+     */
+    public function getDatabaseDetails(): array
+    {
+        $serverVersion = '1.0';
+        $database = new Database();
+
+        $databaseConnection = $database->getConnection()->getDoctrineConnection();
+
+        return [
+            'version' => $serverVersion,
+            'databaseName' => $database->getConnection()->getDatabaseName(),
+            'driver' => $database->getConnection()->getDriverName(),
+            'platform' => $databaseConnection->getDatabasePlatform()->getName(),
+        ];
+    }
+
     /**
      * @throws Exception
      *

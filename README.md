@@ -9,12 +9,18 @@ This package aims to ease interaction with databases
 when developing a Laravel application. The main goal is to automate
 the models and migrations generation.
 
+![Screenshot](./public/img/screenshot.png)
+
 ## Still in Development
 Note: This package is in development :(
 
 ## TODO List
-- Canvas based ERD diagram
-- Left panel with tables tree information linked to the diagram
+### Read actions are implemented first
+- Adjust the database name and version based on the Abstract Platform(doctrine/dbal)
+- Show table relationships
+- Left panel search bar and table + column icons
+- Tree Navigator and Designer section headers
+- ERD actions(zoom in, zoom out, fit, reset, drop table, add relationship)
 - Right panel with table and column information and config options
 - Collapsed left panel with main menus including: Diagram, Migration, History, etc
 - Migration menu should show executed and pending migrations

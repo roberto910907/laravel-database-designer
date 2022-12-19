@@ -24,6 +24,7 @@
             "error",
             "single"
         ],
+        "import/prefer-default-export": "off",
         "vue/multi-word-component-names": "off",
         "vue/require-name-property": ["error"],
         "no-bitwise": "off",

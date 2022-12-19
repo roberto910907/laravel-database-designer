@@ -21,6 +21,16 @@ class SchemaController extends Controller
     }
 
     /**
+     * @return JsonResponse
+     */
+    public function details(): JsonResponse
+    {
+        return response()->json([
+            'data' => $this->schemaManager->getDatabaseDetails(),
+        ]);
+    }
+
+    /**
      * @throws Exception
      *
      * @return JsonResponse
