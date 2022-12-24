@@ -27,6 +27,7 @@ Note: This package is in development :(
 - Use the laravel-console-generator to create the model and migration automatically
 - Write documentation
 - Write unit, functional and E2E tests
+- History of changes in the schema (menu)
 
 ## Installation
 
