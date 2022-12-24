@@ -53,14 +53,14 @@ export const useDatabaseStore = defineStore('databaseStore', {
 
     actions: {
         async loadDatabaseTables() {
-            const response = await axios.get('/api/schema/list');
+            const { data } = await axios.get('/api/schema/list');
 
-            this.tables = response.data.data;
+            this.tables = data.data;
         },
         async loadDatabaseDetails() {
-            const response = await axios.get('/api/schema/details');
+            const { data } = await axios.get('/api/schema/details');
 
-            this.schema = response.data.data;
+            this.schema = data.data;
         },
     },
 });

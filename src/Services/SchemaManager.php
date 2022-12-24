@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace DBDesigner\Services;
 
-use Doctrine\DBAL\Driver\ServerInfoAwareConnection;
 use Doctrine\DBAL\Exception;
 use DBDesigner\Models\Database;
 use Doctrine\DBAL\Schema\Index;

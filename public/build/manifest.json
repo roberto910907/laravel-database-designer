@@ -7,16 +7,16 @@
     "file": "assets/primary-key.b5a51ba4.png",
     "src": "resources/js/assets/primary-key.png"
   },
-  "resources/js/assets/icons8-diamonds-40.png": {
-    "file": "assets/icons8-diamonds-40.5e1c8dcc.png",
-    "src": "resources/js/assets/icons8-diamonds-40.png"
-  },
   "resources/js/assets/icons8-diamonds-40-white.png": {
     "file": "assets/icons8-diamonds-40-white.08c29d8e.png",
     "src": "resources/js/assets/icons8-diamonds-40-white.png"
   },
+  "resources/js/assets/icons8-diamonds-40.png": {
+    "file": "assets/icons8-diamonds-40.5e1c8dcc.png",
+    "src": "resources/js/assets/icons8-diamonds-40.png"
+  },
   "resources/js/app.js": {
-    "file": "assets/app.bdcf64dc.js",
+    "file": "assets/app.27b2ccd0.js",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
