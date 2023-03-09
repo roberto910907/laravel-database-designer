@@ -5,7 +5,7 @@
 <script setup>
 import '@rober9109/vue-tree/dist/style.css';
 import TreeView from '@rober9109/vue-tree';
-import { useDatabaseStore } from '@/stores/DatabaseStore';
+import { useDatabaseStore } from '@/stores/database';
 
 const store = useDatabaseStore();
 </script>

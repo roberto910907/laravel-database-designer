@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { useDatabaseStore } from '@/stores/DatabaseStore';
+import { useDatabaseStore } from '@/stores/database';
 import Designer from '@/components/Diagram/Designer.vue';
 import TreeNavigator from '@/components/Navigator/Tree.vue';
 

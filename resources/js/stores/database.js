@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { defineStore } from 'pinia';
 
-export const useDatabaseStore = defineStore('databaseStore', {
+export const useDatabaseStore = defineStore('database', {
     state: () => {
         return {
             tables: [],

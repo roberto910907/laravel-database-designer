@@ -2,7 +2,7 @@
 /**
  * @author Roberto Rielo <roberto910907@gmail.com>.
  *
- * @version laravel-database-designer
+ * @package laravel-database-designer
  */
 declare(strict_types=1);
 

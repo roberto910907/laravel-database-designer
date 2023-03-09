@@ -316,7 +316,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import { useDatabaseStore } from '@/stores/DatabaseStore';
+import { useDatabaseStore } from '@/stores/database';
 import {
     Dialog,
     DialogPanel,

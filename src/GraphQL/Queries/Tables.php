@@ -1,4 +1,9 @@
 <?php
+/**
+ * @author Roberto Rielo <roberto910907@gmail.com>.
+ *
+ * @package laravel-database-designer
+ */
 
 namespace DBDesigner\GraphQL\Queries;
 
@@ -29,7 +34,7 @@ final class Tables
                 return [
                     'name' => $table->getName(),
                     'primaryKey' => $table->getPrimaryKey()?->getColumns()[0],
-                    'columns' => collect($table->getColumns())->map(function (Column $column) {
+                    'columns' => collect($table->getColumns())->map(function (Column $column): array {
                         return array_merge(
                             $column->toArray(),
                             [
@@ -37,7 +42,7 @@ final class Tables
                                 'typeClass' => $column->getType()::class,
                             ]);
                     }),
-                    'indexes' => collect($table->getIndexes())->map(function (Index $index) {
+                    'indexes' => collect($table->getIndexes())->map(function (Index $index): array {
                         return [
                             'name' => $index->getName(),
                             'isPrimary' => $index->isPrimary(),

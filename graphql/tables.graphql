@@ -1,7 +1,5 @@
 extend type Query {
-    tables(
-        name: String
-    ): [Table]
+    tables(name: String): [Table] @all
 }
 
 type Table {
