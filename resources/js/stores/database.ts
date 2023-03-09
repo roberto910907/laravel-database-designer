@@ -1,11 +1,56 @@
 import axios from 'axios';
 import { defineStore } from 'pinia';
 
+interface Schema {
+    version: string;
+    databaseName: string;
+    driver: string;
+    platform: string;
+}
+
+interface Column {
+    name: string;
+    type: string;
+    typeClass: string;
+    length: number;
+    precision: number;
+    scale: number;
+    unsigned: boolean;
+    autoincrement: boolean;
+    notnull: boolean;
+    default: string;
+    columnDefinition: boolean;
+}
+
+interface Index {
+    name: string;
+    isPrimary: boolean;
+    isUnique: boolean;
+}
+
+interface Table {
+    id: number;
+    name: string;
+    primaryKey: string;
+    columns: [Column];
+    indexes: [Index];
+}
+
+interface TreeNode {
+    text: string;
+    state?: object;
+    children?: Array<string>;
+}
+
+interface TreeNodes {
+    [key: string]: TreeNode;
+}
+
 export const useDatabaseStore = defineStore('database', {
     state: () => {
         return {
-            tables: [],
-            schema: [],
+            tables: [] as Table[],
+            schema: {} as Schema,
             treeConfig: {
                 roots: ['Tables'],
                 keyboardNavigation: true,
@@ -18,7 +63,7 @@ export const useDatabaseStore = defineStore('database', {
                     },
                     children: [],
                 },
-            },
+            } as TreeNodes,
         };
     },
 
@@ -52,12 +97,12 @@ export const useDatabaseStore = defineStore('database', {
     },
 
     actions: {
-        async loadDatabaseTables() {
+        async loadDatabaseTables(): Promise<void> {
             const { data } = await axios.get('/api/schema/list');
 
             this.tables = data.data;
         },
-        async loadDatabaseDetails() {
+        async loadDatabaseDetails(): Promise<void> {
             const { data } = await axios.get('/api/schema/details');
 
             this.schema = data.data;

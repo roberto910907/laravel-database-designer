@@ -33,7 +33,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { useDatabaseStore } from '@/stores/database';
+import { useDatabaseStore } from '@/stores/database.ts';
 import backgroundPatternImage from '@/assets/canvas-background.png';
 import Entity from './Entity.vue';
 
