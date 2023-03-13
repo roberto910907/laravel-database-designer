@@ -32,14 +32,14 @@ interface Table {
     id: number;
     name: string;
     primaryKey: string;
-    columns: [Column];
-    indexes: [Index];
+    columns: Column[];
+    indexes: Index[];
 }
 
 interface TreeNode {
     text: string;
     state?: object;
-    children?: Array<string>;
+    children?: string[];
 }
 
 interface TreeNodes {
@@ -49,6 +49,7 @@ interface TreeNodes {
 export const useDatabaseStore = defineStore('database', {
     state: () => {
         return {
+            search: '' as string,
             tables: [] as Table[],
             schema: {} as Schema,
             treeConfig: {
@@ -61,8 +62,8 @@ export const useDatabaseStore = defineStore('database', {
                     state: {
                         opened: true,
                     },
-                    children: [],
-                },
+                    children: [] as Array<string>,
+                } as TreeNode,
             } as TreeNodes,
         };
     },
@@ -72,11 +73,21 @@ export const useDatabaseStore = defineStore('database', {
             return state.tables.map((table) => table.name);
         },
 
-        getTreeNodes(state) {
-            state.tables.forEach((table) => {
+        filteredTreeNodes(state) {
+            return state.search
+                ? state.treeNodes.Tables.children?.filter((table) =>
+                      table.includes(state.search)
+                  )
+                : state.treeNodes;
+        },
+    },
+
+    actions: {
+        getTreeNodes() {
+            this.tables.forEach((table) => {
                 const tableColumns = Object.values(table.columns);
 
-                state.treeNodes[table.name] = {
+                this.treeNodes[table.name] = {
                     text: table.name,
                     children: Object.values(tableColumns).map(
                         (column) => `${table.name}_${column.name}`
@@ -84,28 +95,19 @@ export const useDatabaseStore = defineStore('database', {
                 };
 
                 tableColumns.forEach((column) => {
-                    state.treeNodes[`${table.name}_${column.name}`] = {
+                    this.treeNodes[`${table.name}_${column.name}`] = {
                         text: column.name,
                     };
                 });
             });
 
-            state.treeNodes.Tables.children = this.tableNames;
-
-            return state.treeNodes;
+            this.treeNodes.Tables.children = this.tableNames;
         },
-    },
-
-    actions: {
-        async loadDatabaseTables(): Promise<void> {
-            const { data } = await axios.get('/api/schema/list');
-
-            this.tables = data.data;
-        },
-        async loadDatabaseDetails(): Promise<void> {
+        async loadDatabaseInformation(): Promise<void> {
             const { data } = await axios.get('/api/schema/details');
 
-            this.schema = data.data;
+            this.tables = data.tables;
+            this.schema = data.schema;
         },
     },
 });

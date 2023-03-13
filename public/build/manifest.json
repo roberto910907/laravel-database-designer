@@ -1,36 +1,36 @@
 {
-  "resources/js/assets/canvas-background.png": {
-    "file": "assets/canvas-background.9ded4940.png",
-    "src": "resources/js/assets/canvas-background.png"
-  },
-  "resources/js/assets/primary-key.png": {
-    "file": "assets/primary-key.b5a51ba4.png",
-    "src": "resources/js/assets/primary-key.png"
-  },
-  "resources/js/assets/icons8-diamonds-40.png": {
-    "file": "assets/icons8-diamonds-40.5e1c8dcc.png",
-    "src": "resources/js/assets/icons8-diamonds-40.png"
-  },
-  "resources/js/assets/icons8-diamonds-40-white.png": {
-    "file": "assets/icons8-diamonds-40-white.08c29d8e.png",
-    "src": "resources/js/assets/icons8-diamonds-40-white.png"
+  "resources/js/app.css": {
+    "file": "assets/app-9a9e097a.css",
+    "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app.518ddd37.js",
-    "src": "resources/js/app.js",
-    "isEntry": true,
-    "css": [
-      "assets/app.a8abc64f.css"
-    ],
     "assets": [
-      "assets/canvas-background.9ded4940.png",
-      "assets/primary-key.b5a51ba4.png",
-      "assets/icons8-diamonds-40.5e1c8dcc.png",
-      "assets/icons8-diamonds-40-white.08c29d8e.png"
-    ]
+      "assets/canvas-background-9ded4940.png",
+      "assets/primary-key-b5a51ba4.png",
+      "assets/icons8-diamonds-40-5e1c8dcc.png",
+      "assets/icons8-diamonds-40-white-08c29d8e.png"
+    ],
+    "css": [
+      "assets/app-9a9e097a.css"
+    ],
+    "file": "assets/app-7c01f264.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
   },
-  "resources/js/app.css": {
-    "file": "assets/app.a8abc64f.css",
-    "src": "resources/js/app.css"
+  "resources/js/assets/canvas-background.png": {
+    "file": "assets/canvas-background-9ded4940.png",
+    "src": "resources/js/assets/canvas-background.png"
+  },
+  "resources/js/assets/icons8-diamonds-40-white.png": {
+    "file": "assets/icons8-diamonds-40-white-08c29d8e.png",
+    "src": "resources/js/assets/icons8-diamonds-40-white.png"
+  },
+  "resources/js/assets/icons8-diamonds-40.png": {
+    "file": "assets/icons8-diamonds-40-5e1c8dcc.png",
+    "src": "resources/js/assets/icons8-diamonds-40.png"
+  },
+  "resources/js/assets/primary-key.png": {
+    "file": "assets/primary-key-b5a51ba4.png",
+    "src": "resources/js/assets/primary-key.png"
   }
 }

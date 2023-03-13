@@ -4,7 +4,7 @@
         <div class="absolute inset-y-0 left-0 md:static md:flex-shrink-0">
             <a
                 href="#"
-                class="flex h-16 w-16 items-center justify-center bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600 md:w-20"
+                class="flex h-16 w-16 items-center justify-center bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600 md:w-16"
             >
                 <img
                     class="h-8 w-auto"
@@ -59,34 +59,25 @@
         <div
             class="hidden md:flex md:min-w-0 md:flex-1 md:items-center md:justify-between"
         >
-            <div class="min-w-0 flex-1">
+            <div class="min-w-0 flex-shrink-0 pl-2">
+                <IconMysql v-if="schema.driver === 'mysql'" class="h-16 w-16" />
+                <IconPostgresql
+                    v-else-if="schema.driver === 'postgres'"
+                    class="h-12 w-12"
+                />
+            </div>
+            <div class="ml-2 min-w-0 flex-1">
                 <h1
                     class="ml-2 text-xl font-bold leading-7 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight"
                 >
-                    {{ store.schema.databaseName }}
+                    {{ schema.databaseName }}
                 </h1>
                 <div
                     class="mt-1 ml-2 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-8"
                 >
                     <div class="mt-1 flex items-center text-sm text-gray-500">
-                        <svg
-                            class="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
-                            x-description="Heroicon name: mini/briefcase"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                        >
-                            <path
-                                fill-rule="evenodd"
-                                d="M6 3.75A2.75 2.75 0 018.75 1h2.5A2.75 2.75 0 0114 3.75v.443c.572.055 1.14.122 1.706.2C17.053 4.582 18 5.75 18 7.07v3.469c0 1.126-.694 2.191-1.83 2.54-1.952.599-4.024.921-6.17.921s-4.219-.322-6.17-.921C2.694 12.73 2 11.665 2 10.539V7.07c0-1.321.947-2.489 2.294-2.676A41.047 41.047 0 016 4.193V3.75zm6.5 0v.325a41.622 41.622 0 00-5 0V3.75c0-.69.56-1.25 1.25-1.25h2.5c.69 0 1.25.56 1.25 1.25zM10 10a1 1 0 00-1 1v.01a1 1 0 001 1h.01a1 1 0 001-1V11a1 1 0 00-1-1H10z"
-                                clip-rule="evenodd"
-                            ></path>
-                            <path
-                                d="M3 15.055v-.684c.126.053.255.1.39.142 2.092.642 4.313.987 6.61.987 2.297 0 4.518-.345 6.61-.987.135-.041.264-.089.39-.142v.684c0 1.347-.985 2.53-2.363 2.686a41.454 41.454 0 01-9.274 0C3.985 17.585 3 16.402 3 15.055z"
-                            ></path>
-                        </svg>
-                        {{ store.schema.driver }} {{ store.schema.version }}
+                        version
+                        <span class="ml-1 font-bold">{{ schema.version }}</span>
                     </div>
                 </div>
             </div>
@@ -240,10 +231,7 @@
                                 </div>
                             </div>
                             <div class="max-w-8xl mx-auto py-3 px-2 sm:px-4">
-                                <template
-                                    v-for="item in navigation"
-                                    :key="item.name"
-                                >
+                                <template v-for="item in navigation">
                                     <a
                                         :href="item.href"
                                         class="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-100"
@@ -314,9 +302,10 @@
     </header>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
-import { useDatabaseStore } from '@/stores/database';
+import { storeToRefs } from 'pinia';
+import { useDatabaseStore } from '@/stores/database.ts';
 import {
     Dialog,
     DialogPanel,
@@ -328,10 +317,12 @@ import {
     TransitionRoot,
 } from '@headlessui/vue';
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid';
-
+import { IconMysql, IconPostgresql } from '@iconify-prerendered/vue-logos';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline';
 
 const store = useDatabaseStore();
+
+const { schema } = storeToRefs(store);
 
 const user = {
     name: 'Whitney Francis',
@@ -360,6 +351,4 @@ const userNavigation = [
 ];
 
 const mobileMenuOpen = ref(false);
-
-store.loadDatabaseDetails();
 </script>

@@ -3,7 +3,7 @@
         aria-label="Sidebar"
         class="hidden md:block md:flex-shrink-0 md:overflow-y-auto md:bg-gray-800"
     >
-        <div class="relative flex w-20 flex-col space-y-3 p-3">
+        <div class="relative flex w-16 flex-col space-y-3 p-2">
             <a
                 v-for="item in sidebarNavigation"
                 :key="item.name"
@@ -12,7 +12,7 @@
                     item.current
                         ? 'bg-gray-900 text-white'
                         : 'text-gray-400 hover:bg-gray-700',
-                    'inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-lg',
+                    'inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg',
                 ]"
             >
                 <span class="sr-only">{{ item.name }}</span>

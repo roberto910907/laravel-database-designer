@@ -18,7 +18,7 @@
             />
 
             <Entity
-                v-for="(table, index) in store.tables"
+                v-for="(table, index) in tables"
                 :key="table.name"
                 :table-data="table"
                 :position="{
@@ -33,15 +33,18 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import { storeToRefs } from 'pinia';
 import { useDatabaseStore } from '@/stores/database.ts';
 import backgroundPatternImage from '@/assets/canvas-background.png';
 import Entity from './Entity.vue';
 
 const store = useDatabaseStore();
 
+const { tables } = storeToRefs(store);
+
 const canvasProperties = {
-    width: 1500,
-    height: 900,
+    width: 1200,
+    height: 800,
     zoom: 1,
     canvas_position_x: 0,
     canvas_position_y: 0,

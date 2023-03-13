@@ -30,6 +30,7 @@
     "dependencies": {
         "@headlessui/vue": "^1.7.12",
         "@heroicons/vue": "^2.0.16",
+        "@iconify-prerendered/vue-logos": "^0.21.1673249187",
         "@mdi/font": "^7.1.96",
         "@rober9109/vue-tree": "^0.1.1",
         "@tailwindcss/forms": "^0.5.3",

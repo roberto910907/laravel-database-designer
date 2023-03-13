@@ -23,10 +23,10 @@ class SchemaManager
      */
     public function getDatabaseDetails(): array
     {
-        $serverVersion = '1.0';
         $database = new Database();
 
         $databaseConnection = $database->getConnection()->getDoctrineConnection();
+        $serverVersion = $databaseConnection->getWrappedConnection()->getServerVersion();
 
         return [
             'version' => $serverVersion,
