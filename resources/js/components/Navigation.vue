@@ -33,7 +33,7 @@ import {
 } from '@heroicons/vue/24/outline';
 
 const sidebarNavigation = [
-    { name: 'Database Manag', href: '#', icon: CircleStackIcon, current: true },
+    { name: 'Database', href: '#', icon: CircleStackIcon, current: true },
     { name: 'Archive', href: '#', icon: ArchiveBoxIcon, current: false },
     { name: 'Customers', href: '#', icon: UserCircleIcon, current: false },
     { name: 'Flagged', href: '#', icon: FlagIcon, current: false },

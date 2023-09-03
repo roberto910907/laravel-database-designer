@@ -11,6 +11,8 @@ vendor
 node_modules
 yarn-error.log
 
+public/hot
+
 _lighthouse_ide_helper.php
 programmatic-types.graphql
 schema-directives.graphql

@@ -25,7 +25,7 @@ class DatabaseDesignerServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this->mergeConfigFrom(
             __DIR__.'/../config/db-designer.php', 'db-designer'
@@ -71,7 +71,7 @@ class DatabaseDesignerServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function defineAssetPublishing()
+    public function defineAssetPublishing(): void
     {
         $this->publishes([
             DB_DESIGNER_PATH.'/public' => public_path('vendor/db-designer'),
@@ -83,7 +83,7 @@ class DatabaseDesignerServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function offerPublishing()
+    protected function offerPublishing(): void
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
@@ -97,7 +97,7 @@ class DatabaseDesignerServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function registerCommands()
+    protected function registerCommands(): void
     {
         if ($this->app->runningInConsole()) {
             $this->commands([

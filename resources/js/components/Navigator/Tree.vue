@@ -18,7 +18,7 @@
     ></TreeView>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import '@rober9109/vue-tree/dist/style.css';
 import TreeView from '@rober9109/vue-tree';
 import { storeToRefs } from 'pinia';
@@ -27,6 +27,4 @@ import { useDatabaseStore } from '@/stores/database.ts';
 const store = useDatabaseStore();
 
 const { search } = storeToRefs(store);
-
-store.getTreeNodes();
 </script>

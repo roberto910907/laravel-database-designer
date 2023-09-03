@@ -32,7 +32,7 @@
         "@heroicons/vue": "^2.0.16",
         "@iconify-prerendered/vue-logos": "^0.21.1673249187",
         "@mdi/font": "^7.1.96",
-        "@rober9109/vue-tree": "^0.1.1",
+        "@rober9109/vue-tree": "^0.1.5",
         "@tailwindcss/forms": "^0.5.3",
         "@tailwindcss/typography": "^0.5.9",
         "@vitejs/plugin-vue": "^4.0.0",

@@ -108,6 +108,8 @@ export const useDatabaseStore = defineStore('database', {
 
             this.tables = data.tables;
             this.schema = data.schema;
+
+            this.getTreeNodes();
         },
     },
 });

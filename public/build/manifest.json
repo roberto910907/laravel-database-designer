@@ -1,6 +1,6 @@
 {
   "resources/js/app.css": {
-    "file": "assets/app-9a9e097a.css",
+    "file": "assets/app-d1d6f76b.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -11,9 +11,9 @@
       "assets/icons8-diamonds-40-white-08c29d8e.png"
     ],
     "css": [
-      "assets/app-9a9e097a.css"
+      "assets/app-d1d6f76b.css"
     ],
-    "file": "assets/app-7c01f264.js",
+    "file": "assets/app-91c659e8.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
